@@ -49,4 +49,9 @@ module.exports.routes = {
     'PreguntaController.load',
     'PreguntaController.corregirRespuesta'
   ],
+
+  'POST r|^/cuestionario/(\\d+)/duplicar$|cuestionarioId' : [
+    'CuestionarioController.load',
+    'CuestionarioController.duplicar'
+  ],
 };
