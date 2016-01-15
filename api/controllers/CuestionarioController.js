@@ -18,7 +18,13 @@ module.exports = {
 	},
 
 	duplicar: function(req, res, next) {
+/*	con metodo de CLASE
 		Cuestionario.duplicar(req.cuestionario, function (error, cuestionarioDuplicado) {
+			if(error){next(error);};
+			res.json(cuestionarioDuplicado);
+		});
+*/
+		req.cuestionario.duplicar(function (error, cuestionarioDuplicado) {
 			if(error){next(error);};
 			res.json(cuestionarioDuplicado);
 		});
