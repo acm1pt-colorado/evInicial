@@ -18,6 +18,11 @@ module.exports = {
     	via : 'cuestionarios'
     },
 
+    alumnos:{
+    	collection: 'alumno',
+    	via: 'cuestionarioAsignado'
+    },
+
     duplicar: function(cb){
     	cuestionarioJSON = this.toJSON();
 		    delete cuestionarioJSON["id"];
@@ -26,7 +31,16 @@ module.exports = {
 				      //created.preguntas.forEach(function(pregunta){created.preguntas.add(pregunta.id)});
 				      cb(null, created);
 				})
-    }
+    },
+
+    asociarGrupo: function(grupo, cb){
+	  	while (grupo.alumnos.length){
+		    var alumnos = grupo.alumnos.pop();
+		    this.alumnos.add(alumnos.id);
+		    this.save(console.log);
+		    }
+				cb(null, this);
+	  }
 
   },
 
@@ -56,5 +70,7 @@ module.exports = {
 				});
 	  });
   }
+
+  
 };
 

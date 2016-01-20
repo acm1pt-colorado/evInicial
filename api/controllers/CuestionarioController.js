@@ -28,7 +28,14 @@ module.exports = {
 			if(error){next(error);};
 			res.json(cuestionarioDuplicado);
 		});
-	} 
+	},
+
+	asociarGrupo: function(req, res, next){
+		req.cuestionario.asociarGrupo(req.grupo,function (error, cuestionario) {
+			if(error){next(error);};
+			res.json(cuestionario);
+		});
+	}
 
 };
 
