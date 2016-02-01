@@ -12,6 +12,7 @@ var fixtures = require('sails-fixtures');
 
 module.exports.bootstrap = function(cb) {
   fixtures.init({
+
     'dir':'/home/alumno/evInicial/dataFixtures',
     'pattern':'*.json' // Default is '*.json' 
   },cb);
@@ -19,3 +20,4 @@ module.exports.bootstrap = function(cb) {
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   //cb();
 };
+

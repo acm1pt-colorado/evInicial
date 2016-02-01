@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+
 	load: function(req, res, next) {
 		Cuestionario.findOne({
 			where: { id: Number(req.params.cuestionarioId)}
@@ -18,6 +19,7 @@ module.exports = {
 	},
 
 	duplicar: function(req, res, next) {
+
 /*	con metodo de CLASE
 		Cuestionario.duplicar(req.cuestionario, function (error, cuestionarioDuplicado) {
 			if(error){next(error);};
@@ -35,7 +37,7 @@ module.exports = {
 			if(error){next(error);};
 			res.json(cuestionario);
 		});
-	}
+
 
 };
 

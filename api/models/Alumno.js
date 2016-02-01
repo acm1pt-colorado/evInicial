@@ -36,8 +36,6 @@ module.exports = {
     cuestionarioAsignado:{
     	collection:'cuestionario',
     	via:'alumnos'
-    }
-
   }
 };
 
