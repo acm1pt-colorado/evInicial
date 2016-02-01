@@ -37,5 +37,6 @@ module.exports = {
     	collection:'cuestionario',
     	via:'alumnos'
   }
+}
 };
 

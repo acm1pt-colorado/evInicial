@@ -16,8 +16,5 @@ module.exports = {
 			} else { next(new Error('No existe el grupo con el id' + req.params.grupoId));}
 		}).catch(function(error){next(error);});
 	}
-
-			
-	
 };
 
