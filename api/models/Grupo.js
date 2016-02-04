@@ -34,10 +34,9 @@ module.exports = {
     
     alumnos:{
     	collection:'alumno',
-    	via:'grupo'
-    }
+    	via:'grupos'
+    }       
 
-    
   }
 };
 
