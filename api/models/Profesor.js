@@ -35,7 +35,10 @@ module.exports = {
     materias:{
     	collection:'MateriaMatriculada',
     	via:'profesor'
-    }
+    },
+
+    user: {
+       model: 'user'   }
   }
 };
 
