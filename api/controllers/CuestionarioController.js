@@ -39,6 +39,9 @@ module.exports = {
 		});
 
 
-}
+	},
+	resultado: function(req, res){
+		res.render('cuestionario/resultado', {aciertos: 8, fallos: 2})
+	}
 };
 
